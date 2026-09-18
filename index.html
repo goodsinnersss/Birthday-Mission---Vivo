@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#17233f">
+<title>Birthday Mission ♡ Vivo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="stars"></div>
+<div class="app-shell">
+  <header class="hud">
+    <div class="hud-logo">♡ JENNI'S ARCADE</div>
+    <div class="hud-right"><span>PLAYER 01: VIVO</span><button id="musicToggle" class="music-btn" type="button"><span id="musicIcon">♫</span> <span id="musicText">PLAY</span></button></div>
+  </header>
+
+  <main>
+    <section class="screen active" id="screen0">
+      <div class="arcade-window intro-window">
+        <div class="window-bar"><span>MISSION.EXE</span><span>● ● ●</span></div>
+        <div class="intro-content">
+          <div class="pixel-badge">SPECIAL EDITION</div>
+          <div class="heart-orbit"><span>♥</span></div>
+          <p class="kicker">A SECRET QUEST FOR</p>
+          <h1>BIRTHDAY<br><em>MISSION</em></h1>
+          <p class="intro-copy">Your birthday adventure has been unlocked.<br>Are you ready, birthday boy?</p>
+          <button class="game-btn pink" data-go="1">▶ START MISSION</button>
+          <p class="hint">soundtrack loading... <span>♥</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen" id="screen1">
+      <div class="arcade-window">
+        <div class="window-bar"><span>LEVEL 01 // MISSION BRIEFING</span><span>♥ ♥ ♥</span></div>
+        <div class="level-head"><span class="level-chip">LEVEL 01</span><h2>MISSION BRIEFING</h2></div>
+        <div class="brief-grid">
+          <div class="photo-frame"><div class="photo-label">♡ JENNI'S FOREVER FAV ♡</div><img src="assets/vivo-jenni.jpeg" alt="Vivo and Jenni"></div>
+          <div class="terminal">
+            <p class="terminal-title">MESSAGE_RECEIVED.TXT</p>
+            <p>Hi Sayang! ❤️</p>
+            <p>Just a little reminder that you're old now... but don't worry, they say age is just a number. 😛</p>
+            <p>Besides, I'm truly grateful for everything you've done and all the growth you've experienced over the past year — all the hard work, the mindset shifts, the tears, and the person you've become. You've changed so much.</p>
+            <p>I can't say you're mature enough just yet, but you're still so much better than you were last year, and I'm soooooo proud of you. 🥹🫶🏼</p>
+            <p>I hope you realize how wonderful and lovable you are as a person, and I'm beyond grateful to have the chance to do life with you. This is your second birthday with me, and I can't wait to celebrate it with you again.</p>
+            <p><strong>Happy Birthday, Sayang! ❤️</strong></p>
+            <p class="signature">— 💌 Your one and only gf</p>
+          </div>
+        </div>
+        <button class="game-btn blue" data-go="2">NEXT LEVEL →</button>
+      </div>
+    </section>
+
+    <section class="screen" id="screen2">
+      <div class="arcade-window compact">
+        <div class="window-bar"><span>LEVEL 02 // SELECT YOUR QUEST</span><span>★ ★ ★</span></div>
+        <div class="level-head"><span class="level-chip">LEVEL 02</span><h2>SELECT YOUR QUEST</h2></div>
+        <p class="lead">Before you claim your birthday reward, you must pass one very important test.</p>
+        <div class="quest-list">
+          <div class="quest-card"><span class="quest-icon">♡</span><div><b>THE GIRLFRIEND QUIZ</b><small>How well do you know Jenni?</small></div><span>01</span></div>
+          <div class="quest-card"><span class="quest-icon">🍜</span><div><b>HUNGRY BOY MODE</b><small>Questions about Vivo's legendary appetite.</small></div><span>02</span></div>
+          <div class="quest-card"><span class="quest-icon">✦</span><div><b>BOYFRIEND LORE</b><small>Only true experts will survive.</small></div><span>03</span></div>
+        </div>
+        <p class="warning">⚠ WARNING: no cheating. Jenni is watching. 👀</p>
+        <button id="startQuiz" class="game-btn pink">START QUIZ →</button>
+      </div>
+    </section>
+
+    <section class="screen" id="screen3">
+      <div class="arcade-window compact">
+        <div class="window-bar"><span id="questionNumber">QUESTION 1 / 5</span><span>♡</span></div>
+        <div class="progress"><span id="progressBar"></span></div>
+        <h2 id="questionText" class="question"></h2>
+        <div id="answerButtons" class="answers"></div>
+        <div id="answerFeedback" class="feedback hidden" aria-live="polite"></div>
+        <button id="nextButton" class="game-btn blue hidden">NEXT QUESTION →</button>
+      </div>
+    </section>
+
+    <section class="screen" id="screen4">
+      <div class="arcade-window compact center-screen">
+        <div class="window-bar"><span>RESULTS.DAT</span><span>★</span></div>
+        <div class="level-head centered"><span class="level-chip">SYSTEM CHECK</span><h2>QUIZ COMPLETE!</h2></div>
+        <div class="score-display"><span>YOUR SCORE</span><strong id="finalScore">0/5</strong><small id="scoreMessage"></small></div>
+        <p class="lead">The Birthday Committee has reviewed your answers.</p>
+        <p class="lead">Your reward is not based on intelligence, memory, or your ability to stay away from food. 🍜😭</p>
+        <p class="love-line">You still passed the most important test:<br><b>Being loved by Jenni. ❤️</b></p>
+        <button class="game-btn pink" data-go="5">CLAIM YOUR REWARD →</button>
+      </div>
+    </section>
+
+    <section class="screen" id="screen5">
+      <div class="arcade-window compact center-screen">
+        <div class="window-bar"><span>REWARD.UNLOCKED</span><span>🎁</span></div>
+        <div class="reward-glow">🎟️</div>
+        <p class="kicker">CONGRATULATIONS, PLAYER 01</p>
+        <h2>REWARD<br>UNLOCKED!</h2>
+        <div class="ticket"><div class="ticket-top">BIRTHDAY REWARD</div><strong>FREE TICKET</strong><span>DUFAN DATE FOR 2 😙</span><small>ONE BIRTHDAY BOY + ONE FAVORITE GIRLFRIEND</small></div>
+        <p class="lead">Unlimited fun — and hopefully, unlimited snacks. 🎢🍜❤️</p>
+        <button class="game-btn blue" data-go="6">UNLOCK DATE DETAILS →</button>
+      </div>
+    </section>
+
+    <section class="screen" id="screen6">
+      <div class="arcade-window compact">
+        <div class="window-bar"><span>LEVEL 04 // DATE DETAILS</span><span>📅</span></div>
+        <div class="level-head"><span class="level-chip">LEVEL 04</span><h2>DATE DETAILS</h2></div>
+        <p class="lead">Your next adventure has been scheduled, handsome boy.</p>
+        <div class="date-console">
+          <div class="date-row"><span>📅 DATE</span><b>WEDNESDAY, 23 SEPTEMBER 2026</b></div>
+          <div class="date-row"><span>⏰ TIME</span><b>20:00 — FINISH</b></div>
+          <div class="date-row"><span>📍 LOCATION</span><b>PAPPILO DINING &amp; CAFE</b></div>
+          <div class="date-row"><span>👗 DRESS</span><b>CREAM + WHITE</b></div>
+        </div>
+        <p class="center lead">Look handsome, dress nicely, and don't forget who your favorite date is. 😌❤️</p>
+        <button class="game-btn pink" data-go="7">UNLOCK FINAL MISSION →</button>
+      </div>
+    </section>
+
+    <section class="screen" id="screen7">
+      <div class="arcade-window compact center-screen">
+        <div class="window-bar"><span>FINAL LEVEL</span><span>⚠ BOSS</span></div>
+        <div class="boss">♡</div>
+        <p class="kicker">FINAL BOSS: VIVO</p>
+        <h2>ARE YOU IN?</h2>
+        <p class="lead">You've survived the quiz, the food-related questions, and Jenni's endless roasting. 😭🍜</p>
+        <p class="lead">Your final mission is simple:</p>
+        <div class="mission-objective">SPEND A SPECIAL NIGHT<br>WITH YOUR FAVORITE GIRLFRIEND. ❤️</div>
+        <button id="acceptMission" class="game-btn pink">I ACCEPT THIS MISSION ❤️</button>
+        <button id="laterMission" class="game-btn ghost">Maybe later 😏</button>
+        <div id="finalFeedback" class="feedback hidden"></div>
+      </div>
+    </section>
+
+    <section class="screen" id="screen8">
+      <div class="arcade-window compact center-screen success-window">
+        <div class="window-bar"><span>MISSION.STATUS</span><span>✓</span></div>
+        <div class="success-icon">🏆</div>
+        <p class="kicker">SYSTEM MESSAGE</p>
+        <h2>MISSION<br>ACCEPTED!</h2>
+        <div class="success-panel">Congratulations, handsome boy!<br><br>You are now officially booked for a date with Jenni.<br><br><b>No refunds. No exchanges. No escape. 😌</b></div>
+        <p class="love-line">ACHIEVEMENT UNLOCKED! 🏆<br>Birthday Date Secured! 🎟️</p>
+        <button class="game-btn blue" data-go="9">CONTINUE →</button>
+      </div>
+    </section>
+
+    <section class="screen" id="screen9">
+      <div class="arcade-window compact center-screen">
+        <div class="window-bar"><span>THANKYOU.TXT</span><span>♥</span></div>
+        <p class="kicker">MISSION COMPLETE</p>
+        <h2>CONGRATULATIONS,<br>HUNGRY BOY! 🍜🏆</h2>
+        <p class="lead">You have officially accepted your birthday mission.</p>
+        <p class="lead">Your next objective: show up handsome, wear cream and white, and spend the night with Jenni. 😌❤️</p>
+        <div class="final-letter">Thank you for being you.<br>I’m blessed to be with you.<br>Let’s make more beautiful memories together.<br><br>— 💌 Your one and only gf</div>
+        <button class="game-btn pink" data-go="10">ONE LAST THING →</button>
+      </div>
+    </section>
+
+    <section class="screen" id="screen10">
+      <div class="arcade-window compact center-screen final-home">
+        <div class="window-bar"><span>SECRET.EXE</span><span>♥ ♥ ♥</span></div>
+        <div class="heart-big">♥</div>
+        <p class="kicker">HIDDEN MESSAGE UNLOCKED</p>
+        <h2>PSST...<br>ONE LAST THING.</h2>
+        <p class="lead">No matter how many birthdays pass, you’ll always be Jenni’s favorite person. ❤️</p>
+        <p class="lead">Now go eat something, hungry boy. You’ve earned it. 🍜😭</p>
+        <button id="replay" class="game-btn blue">↻ REPLAY MISSION</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">MADE WITH ♡ BY JENNI · BIRTHDAY MISSION 2026</footer>
+</div>
+<audio id="audio" src="assets/birthday-song.mp3" loop preload="auto" autoplay></audio>
+<script src="script.js"></script>
+</body>
+</html>
