@@ -13,11 +13,17 @@
 <body>
 <div class="stars"></div>
 <div class="app-shell">
+  
+   <!-- MUSIC -->
+  <audio id="bgMusic" autoplay loop preload="auto">
+    <source src="birthday-song.mp3" type="audio/mpeg">
+  </audio>
+  
   <header class="hud">
     <div class="hud-logo">♡ JENNI'S ARCADE</div>
     <div class="hud-right"><span>PLAYER 01: VIVO</span><button id="musicToggle" class="music-btn" type="button"><span id="musicIcon">♫</span> <span id="musicText">PLAY</span></button></div>
   </header>
-
+  
   <main>
     <section class="screen active" id="screen0">
       <div class="arcade-window intro-window">
@@ -39,7 +45,7 @@
         <div class="window-bar"><span>LEVEL 01 // MISSION BRIEFING</span><span>♥ ♥ ♥</span></div>
         <div class="level-head"><span class="level-chip">LEVEL 01</span><h2>MISSION BRIEFING</h2></div>
         <div class="brief-grid">
-          <div class="photo-frame"><div class="photo-label">♡ JENNI'S FOREVER FAV ♡</div><img src="assets/vivo-jenni.jpeg" alt="Vivo and Jenni"></div>
+          <div class="photo-frame"><div class="photo-label">♡ JENNI'S FOREVER FAV ♡</div><img src="vivo-jenni.jpeg" alt="Vivo and Jenni"></div>
           <div class="terminal">
             <p class="terminal-title">MESSAGE_RECEIVED.TXT</p>
             <p>Hi Sayang! ❤️</p>
@@ -155,7 +161,7 @@
         <h2>CONGRATULATIONS,<br>HUNGRY BOY! 🍜🏆</h2>
         <p class="lead">You have officially accepted your birthday mission.</p>
         <p class="lead">Your next objective: show up handsome, wear cream and white, and spend the night with Jenni. 😌❤️</p>
-        <div class="final-letter">Thank you for being you.<br>I’m blessed to be with you.<br>Let’s make more beautiful memories together.<br><br>— 💌 Your one and only gf</div>
+        <div class="final-letter">Thank you for your time to be on this mission.<br>See you at the date!<br>I love you, Sayang!.<br><br>— 💌 Your one and only gf</div>
         <button class="game-btn pink" data-go="10">ONE LAST THING →</button>
       </div>
     </section>
