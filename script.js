@@ -7,7 +7,7 @@ const questions=[
 {question:'How many times can Vivo eat in one day?',answers:['2 times','3 times','5 times','Every time he sees food'],correct:2,yes:'Correct! Vivo has unlocked the five-meals-a-day achievement. 🍜🏆',no:'Oops, incorrect! Vivo’s stomach capacity is clearly being underestimated. Count those meals again! 🍽️😭'},
 {question:'Why is Vivo never full?',answers:['He has a second stomach','He is secretly a food critic','He has the appetite of a hungry worm','Jenni hasn’t fed him enough'],correct:2,yes:'Correct! The birthday boy is powered by an unlimited food supply. 🪱😭',no:'Not quite! The mystery of Vivo’s endless appetite remains unsolved. Try again, hungry boy! 🪱😂'},
 {question:'What changed after Vivo got together with Jenni?',answers:['He became happier','He became healthier','He became more well-maintained','All of the above'],correct:3,yes:'Correct! Jenni’s love comes with emotional support and premium health benefits. 🥹🫶',no:'Oops! Have you forgotten the magical effects of Jenni’s love? Think again, Sayang. 🥺🫶'},
-{question:'What happened to Vivo’s hairstyle after dating Jenni?',answers:['From potongan panci to handsome prince','From NPC to main character','From biasa aja to boyfriend material','All of the above'],correct:3,yes:'Correct! Jenni successfully completed the Boyfriend Makeover Mission. ✂️✨',no:'Incorrect! Please remember Vivo’s legendary hairstyle transformation. The potongan panci era must not be forgotten. Try again, handsome boy! 😭✂️'}];
+{question:'What happened to Vivo’s hairstyle after dating Jenni?',answers:['From potongan panci to handsome prince','Become much more handsome than before','From biasa aja to "you look good bro"','All of the above'],correct:3,yes:'Correct! Jenni successfully completed the Boyfriend Makeover Mission. ✂️✨',no:'Incorrect! Please remember Vivo’s legendary hairstyle transformation. The potongan panci era must not be forgotten. Try again, handsome boy! 😭✂️'}];
 let qi=0,score=0,answered=false;
 const qn=document.getElementById('questionNumber'),qt=document.getElementById('questionText'),ab=document.getElementById('answerButtons'),fb=document.getElementById('answerFeedback'),nb=document.getElementById('nextButton'),bar=document.getElementById('progressBar');
 function renderQuestion(){const q=questions[qi];answered=false;qn.textContent=`QUESTION ${qi+1} / ${questions.length}`;qt.textContent=q.question;bar.style.width=`${((qi+1)/questions.length)*100}%`;ab.innerHTML='';fb.classList.add('hidden');nb.classList.add('hidden');q.answers.forEach((a,i)=>{const b=document.createElement('button');b.textContent=`${String.fromCharCode(65+i)}. ${a}`;b.onclick=()=>{if(answered)return;answered=true;if(i===q.correct)score++;fb.textContent=i===q.correct?q.yes:q.no;fb.classList.remove('hidden');nb.classList.remove('hidden');[...ab.children].forEach(x=>x.disabled=true)};ab.appendChild(b)})}
@@ -22,7 +22,7 @@ const toggle = document.getElementById('musicToggle');
 const icon = document.getElementById('musicIcon');
 const text = document.getElementById('musicText');
 
-audio.volume = 0.30;
+audio.volume = 0.45;
 audio.loop = true;
 
 function ui(){
